@@ -4,7 +4,7 @@ body {
 
 h1 {
   font-size: 4rem;
-  margin-top: 3%;
+  margin: 3% 0 1% 0;
 }
 
 h2 {
@@ -31,7 +31,14 @@ button:hover {
   color: rgb(0, 180, 204);
   border: 2px solid #000;
 }
-
+.serch-input {
+  font-size: 1rem;
+  padding: 1%;
+  border-radius: 10px;
+  border: 2px solid #000;
+  width: 200px;
+  margin-bottom: 2%;
+}
 .selected {
   border: 2px solid #000;
 }

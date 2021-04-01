@@ -1,6 +1,7 @@
 const button = document.querySelectorAll(".buttonFilter");
 const images = document.querySelectorAll(".imageFilter");
 const helperText = document.getElementById("helper-text");
+const searchBox = document.getElementById("search");
 
 function updateImageDisplay(animal){
     for (let i = 0; i < images.length; i++){
@@ -57,3 +58,17 @@ function updateHelperText(animal){
       }
       return helperText;
 }
+
+searchBox.addEventListener("keyup", function(event){
+    var mySearchTerm = this.value;
+
+    for (let i =0; i < images.length; i++) {
+        var imageElement = images[i];
+
+        if (mySearchTerm === "all" || imageElement.getAttribute("class").includes(mySearchTerm)) {
+            imageElement.style.display = "block";
+        } else {
+            imageElement.style.display = "none";
+        }
+    }
+});
