@@ -1,6 +1,9 @@
 body {
   text-align: center;
 }
+.jumbotron{
+  background-color: #d6f7fa;
+}
 
 h1 {
   font-size: 4rem;
