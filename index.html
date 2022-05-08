@@ -1,88 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>The DOM Project</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>The DOM Practice 2</title>
-</head>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">The Animal Gallery</h1>
+      <p class="lead">
+          <strong>A JavaScript DOM Project.</strong>
+          <br>
+          Within this project I use JavaScript to manipulate the DOM.
+          <br>
+          Below you can either search for a animal or click through the animal buttons.
+      </p>  
+    </div>
+  </div>
 
-<body>
-    <main>
+    <div class="container-fluid">
+        <form>
+            <fieldset>
+                <input
+                id="search"
+                class="serch-input"
+                placeholder="Search"
+                type="text"
+                />
+                <br />
+                <button data-animal="dog" class="buttonFilter">Dog</button>
+                <button data-animal="flamingo" class="buttonFilter">
+                Flamingo
+                </button>
+                <button data-animal="gecko" class="buttonFilter">Gecko</button>
+                <button data-animal="sheep" class="buttonFilter">Sheep</button>
+                <button data-animal="all" class="buttonFilter">All</button>
+            </fieldset>
+        </form>
+    </div>
+
         <section>
-            <h1>The Animal Gallery</h1>
-            <form>
-                <fieldset>
-                    <input id="search" class="serch-input" placeholder="What do you want to search for?" type="text">
-                    <br>
-                    <button data-animal="dog" class="buttonFilter">Dog</button>
-                    <button data-animal="flamingo" class="buttonFilter">Flamingo</button>
-                    <button data-animal="gecko" class="buttonFilter">Gecko</button>
-                    <button data-animal="sheep" class="buttonFilter">Sheep</button>
-                    <button data-animal="all" class="buttonFilter">All</button>
-                </fieldset>
-            </form>
-        </section>
-
-
-        <section>
-            <h2 id="helper-text"></h2>
-            <div class="grid">
-                <div class="imageFilter sheep">
-                    <img src="img/sheep3.jpg" alt="sheep">
-                </div>
-                <div class="imageFilter dog">
-                    <img src="img/dog1.jpg" alt="dog">
-                </div>
-                <div class="imageFilter gecko">
-                    <img src="img/gecko2.jpg" alt="gecko">
-                </div>
-                <div class="imageFilter flamingo">
-                    <img src="img/flamingo1.jpg" alt="flamingo">
-                </div>
-                <div class="imageFilter dog">
-                    <img src="img/dog2.jpg" alt="dog">
-                </div>
-                <div class="imageFilter flamingo">
-                    <img src="img/flamingo3.jpg" alt="flamingo">
-                </div>
-                <div class="imageFilter gecko">
-                    <img src="img/gecko1.jpg" alt="gecko">
-                </div>
-                <div class="imageFilter sheep">
-                    <img src="img/sheep1.jpg" alt="sheep">
-                </div>
-                <div class="imageFilter dog">
-                    <img src="img/dog3.jpg" alt="dog">
-                </div>
-                <div class="imageFilter flamingo">
-                    <img src="img/flamingo2.jpg" alt="flamingo">
-                </div>
-                <div class="imageFilter gecko">
-                    <img src="img/gecko3.jpg" alt="gecko">
-                </div>
-                <div class="imageFilter sheep">
-                    <img src="img/sheep4.jpg" alt="sheep">
-                </div>
-                <div class="imageFilter dog">
-                    <img src="img/dog4.jpg" alt="dog">
-                </div>
-                <div class="imageFilter flamingo">
-                    <img src="img/flamingo4.jpg" alt="flamingo">
-                </div>
-                <div class="imageFilter sheep">
-                    <img src="img/sheep2.jpg" alt="sheep">
-                </div>
-                <div class="imageFilter gecko">
-                    <img src="img/gecko4.jpg" alt="gecko">
-                </div>
+            <div class="text-container">
+                <h2 id="helper-text"></h2>
             </div>
+          <div class="grid">
+            <div class="imageFilter sheep">
+              <img src="img/sheep3.jpg" alt="sheep" />
+            </div>
+            <div class="imageFilter dog">
+              <img src="img/dog1.jpg" alt="dog" />
+            </div>
+            <div class="imageFilter gecko">
+              <img src="img/gecko2.jpg" alt="gecko" />
+            </div>
+            <div class="imageFilter flamingo">
+              <img src="img/flamingo1.jpg" alt="flamingo" />
+            </div>
+            <div class="imageFilter dog">
+              <img src="img/dog2.jpg" alt="dog" />
+            </div>
+            <div class="imageFilter flamingo">
+              <img src="img/flamingo3.jpg" alt="flamingo" />
+            </div>
+            <div class="imageFilter gecko">
+              <img src="img/gecko1.jpg" alt="gecko" />
+            </div>
+            <div class="imageFilter sheep">
+              <img src="img/sheep1.jpg" alt="sheep" />
+            </div>
+            <div class="imageFilter dog">
+              <img src="img/dog3.jpg" alt="dog" />
+            </div>
+            <div class="imageFilter flamingo">
+              <img src="img/flamingo2.jpg" alt="flamingo" />
+            </div>
+            <div class="imageFilter gecko">
+              <img src="img/gecko3.jpg" alt="gecko" />
+            </div>
+            <div class="imageFilter sheep">
+              <img src="img/sheep4.jpg" alt="sheep" />
+            </div>
+            <div class="imageFilter dog">
+              <img src="img/dog4.jpg" alt="dog" />
+            </div>
+            <div class="imageFilter flamingo">
+              <img src="img/flamingo4.jpg" alt="flamingo" />
+            </div>
+            <div class="imageFilter sheep">
+              <img src="img/sheep2.jpg" alt="sheep" />
+            </div>
+            <div class="imageFilter gecko">
+              <img src="img/gecko4.jpg" alt="gecko" />
+            </div>
+          </div>
         </section>
-    </main>
+
+    <div class="container-fluid">
+      <footer>
+        <p>
+          Created by Gary Tate &copy;
+          <script>
+            var CurrentYear = new Date().getFullYear();
+            document.write(CurrentYear);
+          </script>
+        </p>
+      </footer>
+    </div>
 
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
